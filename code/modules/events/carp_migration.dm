@@ -1,7 +1,7 @@
 /datum/round_event_control/carp_migration
 	name = "Carp Migration"
 	typepath = /datum/round_event/carp_migration
-	weight = 15
+	weight = 5
 	min_players = 10
 	earliest_start = 50 MINUTES
 	max_occurrences = 2

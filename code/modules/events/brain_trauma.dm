@@ -1,7 +1,9 @@
 /datum/round_event_control/brain_trauma
 	name = "Spontaneous Brain Trauma"
 	typepath = /datum/round_event/brain_trauma
-	weight = 25
+	max_occurrences = 2
+	min_players = 6
+	weight = 5
 
 /datum/round_event/brain_trauma
 	fakeable = FALSE
