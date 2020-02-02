@@ -349,6 +349,7 @@
 		var/BR = brightness
 		var/PO = bulb_power
 		var/CO = bulb_colour
+
 		if(color)
 			CO = color
 		var/area/A = get_area(src)
@@ -475,6 +476,11 @@
 				switchcount = L.switchcount
 				rigged = L.rigged
 				brightness = L.brightness
+				bulb_colour = L.bulb_colour
+
+				if(L.fixturestate)
+					base_state = L.fixturestate
+
 				on = has_power()
 				update()
 
@@ -772,6 +778,7 @@
 	grind_results = list(/datum/reagent/silicon = 5, /datum/reagent/nitrogen = 10) //Nitrogen is used as a cheaper alternative to argon in incandescent lighbulbs
 	var/rigged = FALSE		// true if rigged to explode
 	var/brightness = 2 //how much light it gives off
+
 
 /obj/item/light/suicide_act(mob/living/carbon/user)
 	if (status == LIGHT_BROKEN)

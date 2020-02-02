@@ -72,6 +72,9 @@
 	///Assoc list of skills - exp
 	var/list/skill_experience = list()
 
+	//vampire holder
+	var/datum/antagonist/vampire/vampire
+
 /datum/mind/New(key)
 	src.key = key
 	soulOwner = src
@@ -285,7 +288,6 @@
 		remove_antag_datum(rev.type)
 		special_role = null
 
-
 /datum/mind/proc/remove_antag_equip()
 	var/list/Mob_Contents = current.get_contents()
 	for(var/obj/item/I in Mob_Contents)
@@ -300,6 +302,7 @@
 	remove_wizard()
 	remove_cultist()
 	remove_rev()
+	remove_yellow()
 
 /datum/mind/proc/equip_traitor(employer = "The Syndicate", silent = FALSE, datum/antagonist/uplink_owner)
 	if(!current)
@@ -662,6 +665,8 @@
 	head.give_hud = TRUE
 	add_antag_datum(head)
 	special_role = ROLE_REV_HEAD
+
+
 
 /datum/mind/proc/AddSpell(obj/effect/proc_holder/spell/S)
 	spell_list += S

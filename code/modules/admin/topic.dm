@@ -85,6 +85,13 @@
 				else
 					message_admins("[key_name_admin(usr)] tried to start a revolution. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to start a revolution.")
+			if("yellows")
+				if(src.makeYellows())
+					message_admins("[key_name(usr)] started a yellow jacket movement.")
+					log_admin("[key_name(usr)] started a yellow jacket movement.")
+				else
+					message_admins("[key_name_admin(usr)] tried to start a yellow jacket movement. Unfortunately, there were no candidates available.")
+					log_admin("[key_name(usr)] failed to start a yellow jacket movement.")
 			if("cult")
 				if(src.makeCult())
 					message_admins("[key_name(usr)] started a cult.")
