@@ -302,7 +302,6 @@
 	remove_wizard()
 	remove_cultist()
 	remove_rev()
-	remove_yellow()
 
 /datum/mind/proc/equip_traitor(employer = "The Syndicate", silent = FALSE, datum/antagonist/uplink_owner)
 	if(!current)

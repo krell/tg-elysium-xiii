@@ -64,7 +64,6 @@
 //antag HUD defines
 #define ANTAG_HUD_CULT			10
 #define ANTAG_HUD_REV			11
-#define ANTAG_HUD_YELLOW		11
 #define ANTAG_HUD_OPS			12
 #define ANTAG_HUD_WIZ			13
 #define ANTAG_HUD_SHADOW    	14
