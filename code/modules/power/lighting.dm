@@ -326,11 +326,14 @@
 			else
 				icon_state = "[base_state]"
 		if(LIGHT_EMPTY)
-			icon_state = "[base_state]-empty"
+//			icon_state = "[base_state]-empty"
+			icon_state = "tube-empty"
 		if(LIGHT_BURNED)
-			icon_state = "[base_state]-burned"
+//			icon_state = "[base_state]-burned"
+			icon_state = "tube-burned"
 		if(LIGHT_BROKEN)
-			icon_state = "[base_state]-broken"
+//			icon_state = "[base_state]-broken"
+			icon_state = "tube-broken"
 
 /obj/machinery/light/update_overlays()
 	. = ..()
@@ -480,6 +483,7 @@
 
 				if(L.fixturestate)
 					base_state = L.fixturestate
+					fixturestate = L.fixturestate
 
 				on = has_power()
 				update()
@@ -679,7 +683,17 @@
 	drop_light_tube(user)
 
 /obj/machinery/light/proc/drop_light_tube(mob/user)
-	var/obj/item/light/L = new light_type()
+
+	var/obj/item/light/L = null
+	switch(fixturestate)
+		if("tube-red") L = new /obj/item/light/tube/red
+		if("tube-blue") L = new /obj/item/light/tube/blue
+		if("tube-green") L = new /obj/item/light/tube/green
+		if("tube-lounge") L = new /obj/item/light/tube/lounge
+		else L = new light_type()
+
+
+
 	L.status = status
 	L.rigged = rigged
 	L.brightness = brightness

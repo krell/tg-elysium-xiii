@@ -1,3 +1,6 @@
+/obj/machinery/light
+	var/fixturestate = null
+
 /obj/item/light
 	var/bulb_colour = "#FFFFFF"
 	var/fixturestate = null
@@ -19,17 +22,7 @@
 	bulb_colour = "#FF0000"
 	fixturestate = "tube-red"
 
-/obj/item/light/bulb/red
-	name = "red  light bulb"
-	desc = "A replacement red light bulb."
-	icon_state = "lbulb"
-	base_state = "lbulb"
-	item_state = "contvapour"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	brightness = 4
-	bulb_colour = "#FF0000"
-	fixturestate = "bulb-red"
+
 
 /obj/item/light/tube/green
 	name = "green light tube"
@@ -38,20 +31,10 @@
 	base_state = "ltube-green"
 	item_state = "c_tube"
 	brightness = 8
+	light_power = 2
 	bulb_colour = "#00FF00"
 	fixturestate = "tube-green"
 
-/obj/item/light/bulb/green
-	name = " green light bulb"
-	desc = "A replacement green light bulb."
-	icon_state = "lbulb"
-	base_state = "lbulb"
-	item_state = "contvapour"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	brightness = 4
-	bulb_colour = "#00FF00"
-	fixturestate = "bulb-green"
 
 /obj/item/light/tube/blue
 	name = "blue light tube"
@@ -63,17 +46,6 @@
 	bulb_colour = "#0000FF"
 	fixturestate = "tube-blue"
 
-/obj/item/light/bulb/blue
-	name = "blue light bulb"
-	desc = "A replacement blue light bulb."
-	icon_state = "lbulb"
-	base_state = "lbulb"
-	item_state = "contvapour"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	brightness = 4
-	bulb_colour = "#0000FF"
-	fixturestate = "bulb-blue"
 
 /obj/item/light/tube/lounge
 	name = "lounge light tube"
@@ -84,17 +56,3 @@
 	brightness = 8
 	bulb_colour = "#B00CFE"
 	fixturestate = "tube-lounge"
-
-/obj/item/light/bulb/lounge
-	name = "lounge light bulb"
-	desc = "A replacement lounge light bulb."
-	icon_state = "lbulb"
-	base_state = "lbulb"
-	item_state = "contvapour"
-	lefthand_file = 'icons/mob/inhands/equipment/medical_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/equipment/medical_righthand.dmi'
-	brightness = 4
-	bulb_colour = "#B00CFE"
-	fixturestate = "bulb-lounge"
-
-
