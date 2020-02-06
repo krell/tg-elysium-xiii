@@ -693,7 +693,6 @@
 		else L = new light_type()
 
 
-
 	L.status = status
 	L.rigged = rigged
 	L.brightness = brightness
@@ -792,7 +791,6 @@
 	grind_results = list(/datum/reagent/silicon = 5, /datum/reagent/nitrogen = 10) //Nitrogen is used as a cheaper alternative to argon in incandescent lighbulbs
 	var/rigged = FALSE		// true if rigged to explode
 	var/brightness = 2 //how much light it gives off
-
 
 /obj/item/light/suicide_act(mob/living/carbon/user)
 	if (status == LIGHT_BROKEN)

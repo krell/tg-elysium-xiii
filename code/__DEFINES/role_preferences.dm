@@ -12,8 +12,6 @@
 #define ROLE_CHANGELING			"Changeling"
 #define ROLE_WIZARD				"Wizard"
 #define ROLE_MALF				"Malf AI"
-#define ROLE_YELLOW				"Yellow Jacket"
-#define ROLE_YELLOW_HEAD		"Head Yellow Jacket"
 #define ROLE_REV				"Revolutionary"
 #define ROLE_REV_HEAD			"Head Revolutionary"
 #define ROLE_ALIEN				"Xenomorph"
@@ -37,7 +35,6 @@
 #define ROLE_DEATHSQUAD			"Deathsquad"
 #define ROLE_LAVALAND			"Lavaland"
 #define ROLE_INTERNAL_AFFAIRS	"Internal Affairs Agent"
-#define ROLE_VAMPIRE			"Vampire"
 
 //Missing assignment means it's not a gamemode specific role, IT'S NOT A BUG OR ERROR.
 //The gamemode specific ones are just so the gamemodes can query whether a player is old enough

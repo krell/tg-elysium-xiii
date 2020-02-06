@@ -15,7 +15,6 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/human
 	var/info_text = "You are a <span class='danger'>Vampire</span>. You will slowly but constantly lose blood if outside of a coffin. If inside a coffin, you will slowly heal. You may gain more blood by grabbing a live victim and using your drain ability."
 	var/obj/effect/proc_holder/spell/targeted/shapeshift/bat/batform //attached to the datum itself to avoid cloning memes, and other duplicates
-	var/iscloaking = 0
 
 
 
@@ -48,17 +47,13 @@
 		C.adjustOxyLoss(-4)
 		C.adjustCloneLoss(-4)
 		return
-	C.blood_volume -= 0.18
-
+	C.blood_volume -= 0.25
 	if(C.blood_volume <= BLOOD_VOLUME_SURVIVE)
 		to_chat(C, "<span class='danger'>You ran out of blood!</span>")
 		var/obj/shapeshift_holder/H = locate() in C
 		if(H)
 			H.shape.dust() //make sure we're killing the bat if you are out of blood, if you don't it creates weird situations where the bat is alive but the caster is dusted.
 		C.dust()
-	else
-		C.heal_overall_damage(1,1, 0, BODYPART_ORGANIC)
-
 	var/area/A = get_area(C)
 	if(istype(A, /area/chapel))
 		to_chat(C, "<span class='warning'>You don't belong here!</span>")
@@ -77,7 +72,7 @@
 	color = "#1C1C1C"
 	var/drain_cooldown = 0
 
-#define VAMP_DRAIN_AMOUNT 80
+#define VAMP_DRAIN_AMOUNT 50
 
 /datum/action/item_action/organ_action/vampire
 	name = "Drain Victim"
@@ -120,7 +115,6 @@
 			playsound(H, 'sound/items/drink.ogg', 30, TRUE, -2)
 			victim.blood_volume = CLAMP(victim.blood_volume - drained_blood, 0, BLOOD_VOLUME_MAXIMUM)
 			H.blood_volume = CLAMP(H.blood_volume + drained_blood, 0, BLOOD_VOLUME_MAXIMUM)
-			H.heal_overall_damage(2,2,0, BODYPART_ORGANIC)
 			if(!victim.blood_volume)
 				to_chat(H, "<span class='notice'>You finish off [victim]'s blood supply.</span>")
 
