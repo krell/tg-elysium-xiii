@@ -1,3 +1,0 @@
-krhell role=admin
-okatsuki role=admin
-aza25 role=admin
