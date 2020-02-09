@@ -1,0 +1,75 @@
+"aa" = (/turf/closed/wall,/area/medical/storage)
+"ab" = (/turf/closed/wall,/area/medical/surgery)
+"ac" = (/obj/structure/closet/crate/freezer/blood,/turf/open/floor/plasteel/white/corner,/area/medical/storage)
+"ad" = (/obj/structure/closet/crate/medical{icon_state = "medicalcrateopen"},/obj/item/surgical_drapes,/obj/item/retractor,/obj/item/scalpel,/obj/item/surgicaldrill,/obj/item/cautery,/obj/item/circular_saw,/obj/item/hemostat,/turf/open/floor/plasteel/white/side,/area/medical/storage)
+"ae" = (/obj/structure/closet/crate/medical{icon_state = "medicalcrateopen"},/obj/item/defibrillator/loaded,/obj/item/defibrillator/loaded,/obj/machinery/light{icon_state = "tube"; dir = 1},/turf/open/floor/plasteel/white/side,/area/medical/storage)
+"af" = (/obj/structure/closet/crate/medical{icon_state = "medicalcrateopen"},/obj/item/organ_storage,/obj/item/organ_storage,/obj/item/organ_storage,/obj/item/organ_storage,/obj/item/organ_storage,/obj/item/organ_storage,/obj/machinery/light_switch{step_y = 25},/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 8},/area/medical/storage)
+"ag" = (/obj/structure/table,/obj/item/scalpel,/obj/item/retractor,/obj/machinery/light{icon_state = "tube"; dir = 8},/turf/open/floor/plasteel/white/corner,/area/medical/surgery)
+"ah" = (/obj/structure/table,/obj/item/surgical_drapes,/turf/open/floor/plasteel/white/side,/area/medical/surgery)
+"ai" = (/obj/machinery/light_switch{step_y = 25},/turf/open/floor/plasteel/white/side,/area/medical/surgery)
+"aj" = (/turf/open/floor/plasteel/white/side,/area/medical/surgery)
+"ak" = (/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 8},/area/medical/surgery)
+"al" = (/obj/structure/bedsheetbin,/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 4},/area/medical/storage)
+"am" = (/obj/machinery/atmospherics/components/unary/vent_pump,/turf/open/floor/plasteel/white,/area/medical/storage)
+"an" = (/turf/open/floor/plasteel/white,/area/medical/storage)
+"ao" = (/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 8},/area/medical/storage)
+"ap" = (/obj/structure/table,/obj/item/circular_saw,/obj/item/hemostat,/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 4},/area/medical/surgery)
+"aq" = (/turf/open/floor/plasteel/white,/area/medical/surgery)
+"ar" = (/obj/structure/table/optable,/turf/open/floor/plasteel/white,/area/medical/surgery)
+"as" = (/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 8},/area/medical/surgery)
+"at" = (/obj/vehicle/ridden/wheelchair{icon_state = "wheelchair"; dir = 4},/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 4},/area/medical/storage)
+"au" = (/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 1},/area/medical/storage)
+"av" = (/obj/machinery/atmospherics/components/unary/vent_scrubber,/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 1},/area/medical/storage)
+"aw" = (/obj/structure/table,/obj/item/cautery,/obj/item/surgicaldrill,/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 4},/area/medical/surgery)
+"ax" = (/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 1},/area/medical/surgery)
+"ay" = (/obj/machinery/light{icon_state = "tube"; dir = 4},/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 1},/area/medical/surgery)
+"az" = (/obj/structure/door_assembly/door_assembly_med{icon_state = "closed"},/turf/open/floor/plasteel/white,/area/medical/storage)
+"aA" = (/obj/structure/sink,/turf/closed/wall,/area/medical/surgery)
+"aB" = (/obj/structure/curtain{icon_state = "bathroom-closed"},/turf/open/floor/plasteel/white,/area/medical/surgery)
+"aC" = (/turf/closed/wall,/area/medical/medbay)
+"aD" = (/obj/machinery/light{icon_state = "tube"; dir = 8},/obj/structure/sign/warning/biohazard{step_y = 29},/turf/open/floor/plasteel/white/corner,/area/medical/medbay)
+"aE" = (/turf/open/floor/plasteel/white/side,/area/medical/medbay)
+"aF" = (/obj/machinery/light_switch{step_y = 25},/turf/open/floor/plasteel/white/side,/area/medical/medbay)
+"aG" = (/obj/structure/extinguisher_cabinet{step_y = 29},/turf/open/floor/plasteel/white/side,/area/medical/medbay)
+"aH" = (/obj/machinery/light{icon_state = "tube"; dir = 1},/turf/open/floor/plasteel/white/side,/area/medical/medbay)
+"aI" = (/obj/item/roller,/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 8},/area/medical/medbay)
+"aJ" = (/obj/structure/chair{icon_state = "chair"; dir = 4},/obj/machinery/firealarm{step_x = -26},/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 4},/area/medical/medbay)
+"aK" = (/obj/machinery/atmospherics/components/unary/vent_pump,/turf/open/floor/plasteel/white,/area/medical/medbay)
+"aL" = (/turf/open/floor/plasteel/white,/area/medical/medbay)
+"aM" = (/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 9},/area/medical/medbay)
+"aN" = (/obj/machinery/light,/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 1},/area/medical/medbay)
+"aO" = (/obj/structure/sink{icon_state = "sink"; dir = 1},/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 1},/area/medical/medbay)
+"aP" = (/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 1},/area/medical/medbay)
+"aQ" = (/obj/item/roller,/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 1},/area/medical/medbay)
+"aR" = (/obj/structure/chair{icon_state = "chair"; dir = 4},/obj/structure/sign/poster/official/help_others{step_x = -31},/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 4},/area/medical/medbay)
+"aS" = (/obj/structure/chair{icon_state = "chair"; dir = 8},/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 8},/area/medical/medbay)
+"aT" = (/obj/machinery/airalarm{icon_state = "alarm0"; dir = 4},/turf/closed/wall,/area/medical/medbay)
+"aU" = (/obj/structure/chair{icon_state = "chair"; dir = 4},/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 4},/area/medical/medbay)
+"aV" = (/obj/structure/table,/obj/item/cautery,/obj/item/surgicaldrill,/turf/open/floor/plasteel/white/corner,/area/medical/surgery)
+"aW" = (/obj/machinery/light{icon_state = "tube"; dir = 4},/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 8},/area/medical/surgery)
+"aX" = (/obj/structure/door_assembly/door_assembly_med{icon_state = "closed"},/turf/open/floor/plasteel/white,/area/medical/medbay)
+"aY" = (/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 4},/area/medical/medbay)
+"aZ" = (/obj/machinery/atmospherics/components/unary/vent_scrubber,/turf/open/floor/plasteel/white,/area/medical/medbay)
+"ba" = (/obj/machinery/light{icon_state = "tube"; dir = 4},/obj/machinery/iv_drip,/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 8},/area/medical/medbay)
+"bb" = (/obj/structure/table,/obj/item/hemostat,/obj/item/circular_saw,/turf/open/floor/plasteel/white,/area/medical/surgery)
+"bc" = (/obj/structure/bed,/obj/item/bedsheet/medical,/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 4},/area/medical/medbay)
+"bd" = (/obj/structure/bed,/obj/item/bedsheet/medical,/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 1},/area/medical/medbay)
+"be" = (/obj/structure/bed,/obj/item/bedsheet/medical,/obj/machinery/iv_drip,/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 1},/area/medical/medbay)
+"bf" = (/obj/structure/table,/obj/item/scalpel,/obj/item/retractor,/obj/machinery/light{icon_state = "tube"; dir = 8},/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 4},/area/medical/surgery)
+"bg" = (/obj/structure/table,/obj/item/surgical_drapes,/turf/open/floor/plasteel/white/side{icon_state = "whitehall"; dir = 1},/area/medical/surgery)
+"bh" = (/turf/open/floor/plasteel/white/corner{icon_state = "whitecorner"; dir = 1},/area/medical/surgery)
+
+(1,1,1) = {"
+aaaaaaaaaaababababababab
+aaacadaeafabagahaiajakab
+aaalamanaoabapaqaqarasab
+aaatauauavabawaxaxaxayab
+aaaaazaaaaabaAaBabababab
+aCaDaEaFaGaEaEaEaHaEaIaC
+aCaJaKaLaMaNaOaPaPaPaQaC
+aCaRaLaLaSababaBabababab
+aTaUaLaLaSabaVajaiajaWab
+aXaYaZaLbaabbbaqaqarasab
+aCbcbdbdbeabbfbgaxaxbhab
+aCaCaCaCaCababababababab
+"}
