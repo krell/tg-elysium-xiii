@@ -327,13 +327,13 @@
 				icon_state = "[base_state]"
 		if(LIGHT_EMPTY)
 //			icon_state = "[base_state]-empty"
-			icon_state = "tube-empty"
+			icon_state = "[fitting]-empty"
 		if(LIGHT_BURNED)
 //			icon_state = "[base_state]-burned"
-			icon_state = "tube-burned"
+			icon_state = "[fitting]-burned"
 		if(LIGHT_BROKEN)
 //			icon_state = "[base_state]-broken"
-			icon_state = "tube-broken"
+			icon_state = "[fitting]-broken"
 
 /obj/machinery/light/update_overlays()
 	. = ..()
