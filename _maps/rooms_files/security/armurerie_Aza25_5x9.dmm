@@ -1,0 +1,31 @@
+"a" = (/turf/closed/wall/r_wall,/area/space)
+"b" = (/obj/structure/closet/secure_closet/armory2,/obj/item/ammo_box/magazine/wt550m9,/obj/item/ammo_box/magazine/wt550m9,/obj/item/ammo_box/magazine/wt550m9,/obj/item/storage/box/flashbangs,/obj/item/storage/box/lethalshot,/obj/item/storage/box/lethalshot,/obj/item/storage/box/lethalshot,/obj/item/storage/box/teargas,/turf/open/floor/plasteel/dark,/area/space)
+"c" = (/obj/structure/guncase/shotgun,/obj/item/gun/ballistic/shotgun/riot,/obj/item/gun/ballistic/shotgun/riot,/obj/item/gun/ballistic/shotgun/riot,/obj/structure/sign/poster/official/safety_report{step_x = 0; step_y = 31},/turf/open/floor/plasteel/dark,/area/space)
+"d" = (/obj/structure/guncase,/obj/item/gun/ballistic/automatic/wt550,/obj/item/gun/ballistic/shotgun/automatic/combat,/turf/open/floor/plasteel/dark,/area/space)
+"e" = (/obj/machinery/light{icon_state = "tube"; dir = 8},/turf/open/floor/plasteel/dark,/area/space)
+"f" = (/obj/machinery/atmospherics/components/unary/vent_scrubber,/turf/open/floor/plasteel/dark,/area/space)
+"g" = (/obj/machinery/power/apc{step_x = 26},/obj/machinery/light{icon_state = "tube"; dir = 4},/turf/open/floor/plasteel/dark,/area/space)
+"h" = (/obj/structure/rack,/obj/item/clothing/head/helmet/riot,/obj/item/clothing/head/helmet/riot,/obj/item/clothing/head/helmet/riot,/obj/item/clothing/suit/armor/riot,/obj/item/clothing/suit/armor/riot,/obj/item/clothing/suit/armor/riot,/turf/open/floor/plasteel/dark,/area/space)
+"i" = (/turf/open/floor/plasteel/dark,/area/space)
+"j" = (/obj/structure/table,/obj/machinery/recharger,/obj/item/storage/box/rubbershot{step_x = 3; step_y = 11},/obj/item/storage/box/rubbershot{step_x = 3; step_y = 11},/obj/item/storage/box/rubbershot{step_x = 3; step_y = 11},/turf/open/floor/plasteel/dark,/area/space)
+"k" = (/obj/machinery/suit_storage_unit/security,/turf/open/floor/plasteel/dark,/area/space)
+"l" = (/obj/structure/rack,/obj/item/megaphone/sec,/obj/item/holosign_creator/security,/obj/item/gun/energy/e_gun/dragnet,/turf/open/floor/plasteel/dark,/area/space)
+"m" = (/obj/machinery/atmospherics/components/unary/vent_pump,/turf/open/floor/plasteel/dark,/area/space)
+"n" = (/obj/structure/rack,/obj/item/melee/classic_baton,/obj/item/melee/classic_baton,/obj/item/melee/classic_baton,/obj/item/shield/riot,/obj/item/shield/riot,/obj/item/shield/riot,/turf/open/floor/plasteel/dark,/area/space)
+"o" = (/obj/structure/rack,/obj/item/gun/energy/ionrifle,/obj/item/gun/energy/temperature,/turf/open/floor/plasteel/dark,/area/space)
+"p" = (/obj/structure/rack,/obj/item/gun/energy/e_gun,/obj/item/gun/energy/e_gun,/obj/item/gun/energy/e_gun,/turf/open/floor/plasteel/dark,/area/space)
+"q" = (/obj/structure/rack,/obj/item/gun/energy/disabler,/obj/item/gun/energy/disabler,/obj/item/gun/energy/disabler,/obj/item/gun/energy/disabler,/obj/machinery/light{icon_state = "tube"; dir = 8},/turf/open/floor/plasteel/dark,/area/space)
+"r" = (/obj/structure/rack,/obj/item/gun/energy/e_gun/advtaser,/obj/item/gun/energy/e_gun/advtaser,/obj/item/gun/energy/e_gun/advtaser,/obj/machinery/light{icon_state = "tube"; dir = 4},/turf/open/floor/plasteel/dark,/area/space)
+"s" = (/obj/structure/door_assembly/door_assembly_sec{icon_state = "closed"},/turf/open/floor/plasteel/dark,/area/space)
+
+(1,1,1) = {"
+aaaaa
+abcda
+aefga
+ahija
+akika
+almna
+aoipa
+aqira
+aasaa
+"}
