@@ -1,7 +1,7 @@
 {
     "map_name": "Elysium XIII",
     "map_path": "map_files/ElysiumXIII",
-    "map_file": "elysium_xiii.dmm",
+    "map_file": "ElysiumXIII.dmm",
     "shuttles": {
 	    "emergency": "emergency_pubby",
 	    "whiteship": "whiteship_pubby",
