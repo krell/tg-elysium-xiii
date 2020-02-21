@@ -13,11 +13,18 @@ Format:
 	votable (is this map votable)
 endmap
 
+
 map elysiumxiii
 	default
 endmap
 
-#map boxstation
+
+map umbrella
+	default
+	votable
+endmap
+
+map boxstation
 	#default
 	#voteweight 1.5
 #	votable
