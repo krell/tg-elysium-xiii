@@ -2932,6 +2932,7 @@
 #include "code\modules\tooltip\tooltip.dm"
 #include "code\modules\umbrella\items.dm"
 #include "code\modules\umbrella\manual.dm"
+#include "code\modules\umbrella\signs.dm"
 #include "code\modules\umbrella\diseases\ebola.dm"
 #include "code\modules\umbrella\diseases\progenitor.dm"
 #include "code\modules\umbrella\diseases\t_virus.dm"

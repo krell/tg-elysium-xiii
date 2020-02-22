@@ -15,6 +15,6 @@
 		/obj/item/reagent_containers/glass/bottle/plasma = 1,
 		/obj/item/reagent_containers/glass/bottle/synaptizine = 1,
 		/obj/item/reagent_containers/glass/bottle/formaldehyde = 1,
-		/obj/item/reagent_containers/glass/bottle/ebola = 1,
-		/obj/item/reagent_containers/glass/bottle/progenitor = 1,
-		/obj/item/reagent_containers/glass/bottle/tvirus = 1)
+		/obj/item/reagent_containers/glass/bottle/ebola = 10,
+		/obj/item/reagent_containers/glass/bottle/progenitor = 10,
+		/obj/item/reagent_containers/glass/bottle/tvirus = 10)
