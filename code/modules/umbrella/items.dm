@@ -96,3 +96,5 @@
 	name = "Virus Progenitor culture bottle"
 	desc = "A small bottle. Contains Progenitor Virus culture in synthblood medium."
 	spawned_disease = /datum/disease/progenitor
+
+

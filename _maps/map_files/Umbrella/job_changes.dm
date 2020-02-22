@@ -14,9 +14,11 @@
 	access += ACCESS_VIROLOGY
 	access += ACCESS_GENETICS
 	access += ACCESS_CHEMISTRY
+	access += ACCESS_KITCHEN
 	minimal_access += ACCESS_VIROLOGY
 	minimal_access += ACCESS_GENETICS
 	minimal_access += ACCESS_CHEMISTRY
+	minimal_access += ACCESS_KITCHEN
 
 /datum/job/scientist/New()
 	..()
@@ -47,8 +49,10 @@
 	access += ACCESS_QM
 	access += ACCESS_CHEMISTRY
 	access += ACCESS_MEDICAL
+	access += ACCESS_KITCHEN
 	minimal_access += ACCESS_VIROLOGY
 	minimal_access += ACCESS_CARGO
 	minimal_access += ACCESS_QM
 	minimal_access += ACCESS_CHEMISTRY
 	minimal_access += ACCESS_MEDICAL
+	minimal_access += ACCESS_KITCHEN
