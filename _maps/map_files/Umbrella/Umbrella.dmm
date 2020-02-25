@@ -428,6 +428,7 @@
 	req_access_txt = "56"
 	},
 /obj/machinery/door/firedoor,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/crew_quarters/heads/chief)
 "cx" = (
@@ -435,6 +436,7 @@
 /turf/open/floor/plasteel,
 /area/engine/lobby)
 "cy" = (
+/obj/structure/cable,
 /turf/open/floor/plasteel/white,
 /area/medical/medbay)
 "cz" = (
@@ -667,7 +669,11 @@
 "dF" = (
 /obj/structure/table,
 /obj/item/storage/belt/utility,
-/obj/item/stack/cable_coil,
+/obj/item/clothing/gloves/color/yellow{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/item/clothing/gloves/color/yellow,
 /turf/open/floor/plasteel,
 /area/engine/lobby)
 "dI" = (
@@ -928,14 +934,6 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/engine/air,
 /area/engine/atmos)
-"ft" = (
-/obj/machinery/power/apc{
-	name = "Security Checkpoint APC";
-	pixel_x = 1;
-	pixel_y = -23
-	},
-/turf/open/floor/plasteel,
-/area/security/checkpoint/customs)
 "fw" = (
 /obj/structure/table,
 /obj/item/surgical_drapes,
@@ -1099,6 +1097,7 @@
 /area/maintenance/department/cargo)
 "gQ" = (
 /obj/structure/sign/logo/umbrella7,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/medical/medbay)
 "gS" = (
@@ -1306,7 +1305,8 @@
 /area/engine/engineering)
 "hZ" = (
 /obj/machinery/button/door{
-	id = "Supermatter"
+	id = "Supermatter";
+	pixel_y = 32
 	},
 /turf/open/floor/plasteel,
 /area/hallway/primary/aft)
@@ -2143,6 +2143,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "os" = (
@@ -2641,7 +2642,6 @@
 "ry" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
-/obj/item/stack/cable_coil,
 /turf/open/floor/plasteel,
 /area/engine/lobby)
 "rA" = (
@@ -3023,6 +3023,10 @@
 /obj/effect/turf_decal/tile/yellow,
 /turf/open/floor/plasteel,
 /area/tcommsat/computer)
+"ur" = (
+/obj/machinery/chem_heater,
+/turf/open/floor/plasteel,
+/area/medical/virology)
 "uu" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible{
 	dir = 10
@@ -3429,6 +3433,14 @@
 /obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/quartermaster/qm)
+"xz" = (
+/obj/machinery/light{
+	dir = 1;
+	light_color = "#706891"
+	},
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/medical/medbay)
 "xG" = (
 /obj/structure/sign/logo/umbrella3,
 /turf/open/floor/plasteel/dark,
@@ -3961,14 +3973,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
-"Ce" = (
-/obj/item/twohanded/required/kirbyplants,
-/obj/effect/turf_decal/tile/blue,
-/obj/effect/turf_decal/tile/blue{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/hallway/primary/central)
 "Cg" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
 /obj/structure/cable,
@@ -3990,6 +3994,10 @@
 /obj/structure/sign/logo/umbrella4,
 /turf/open/floor/plasteel/dark,
 /area/hallway/primary/central)
+"Cx" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/plasteel,
+/area/hallway/secondary/entry)
 "Cz" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk{
@@ -4791,6 +4799,7 @@
 /obj/machinery/power/smes{
 	charge = 5e+006
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/engine/gravity_generator)
 "Iu" = (
@@ -5213,6 +5222,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/engine/atmos)
+"Li" = (
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/quartermaster/storage)
 "Lo" = (
 /obj/machinery/atmospherics/components/trinary/filter/atmos/n2{
 	dir = 4
@@ -5906,6 +5919,7 @@
 /turf/open/floor/engine,
 /area/engine/engineering)
 "Ql" = (
+/obj/structure/cable,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
 "Qu" = (
@@ -6091,6 +6105,7 @@
 	pixel_y = 32;
 	step_y = 0
 	},
+/obj/structure/cable,
 /turf/open/floor/plasteel/white,
 /area/hallway/primary/central)
 "RI" = (
@@ -6568,6 +6583,10 @@
 	},
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/hos)
+"UJ" = (
+/obj/structure/cable,
+/turf/open/floor/plasteel,
+/area/medical/medbay)
 "UR" = (
 /obj/effect/turf_decal/loading_area{
 	dir = 8
@@ -6619,6 +6638,7 @@
 /area/medical/storage)
 "Vg" = (
 /obj/structure/sign/logo/umbrella9,
+/obj/structure/cable,
 /turf/open/floor/plasteel,
 /area/medical/medbay)
 "Vi" = (
@@ -6715,7 +6735,6 @@
 /area/crew_quarters/kitchen)
 "Wa" = (
 /obj/structure/table/glass,
-/obj/machinery/light,
 /obj/item/book/manual/wiki/chemistry,
 /obj/item/book/manual/wiki/grenades{
 	pixel_x = -4;
@@ -11683,7 +11702,7 @@ aa
 aa
 aa
 aa
-Ce
+aa
 aa
 aa
 aa
@@ -13365,7 +13384,7 @@ vN
 Cm
 Cm
 qX
-qX
+UJ
 Cm
 Cm
 Cm
@@ -13517,10 +13536,10 @@ qX
 qX
 qX
 qX
-qX
-qX
-qX
-qX
+UJ
+UJ
+UJ
+UJ
 qX
 qX
 qX
@@ -13669,14 +13688,14 @@ qX
 qX
 MH
 Lv
-qX
+UJ
 MH
 Lv
-qX
-qX
-qX
-qX
-qX
+UJ
+UJ
+UJ
+UJ
+UJ
 Xr
 Pb
 Cm
@@ -13817,11 +13836,11 @@ ed
 tR
 AA
 Cm
-qX
-qX
-qX
-qX
-qX
+UJ
+UJ
+UJ
+UJ
+UJ
 Xr
 qX
 qX
@@ -13969,7 +13988,7 @@ AA
 AA
 AA
 Cm
-qX
+UJ
 qX
 Cm
 oa
@@ -14121,7 +14140,7 @@ LB
 sy
 AA
 Cm
-qX
+UJ
 qX
 Cm
 IY
@@ -14273,7 +14292,7 @@ AA
 AA
 AA
 Cm
-qX
+UJ
 qX
 Cm
 pQ
@@ -14425,7 +14444,7 @@ Wh
 Wh
 lu
 Cm
-qX
+UJ
 qX
 Cm
 TN
@@ -14577,7 +14596,7 @@ hQ
 XP
 hQ
 Cm
-qX
+UJ
 qX
 Cm
 Cm
@@ -14729,7 +14748,7 @@ hQ
 jk
 XP
 Cm
-qX
+UJ
 yg
 pv
 dW
@@ -14881,7 +14900,7 @@ dE
 od
 pm
 Cm
-pU
+xz
 kZ
 uB
 mV
@@ -15033,7 +15052,7 @@ hQ
 qA
 XP
 Cm
-qX
+UJ
 gQ
 Vg
 QU
@@ -15187,7 +15206,7 @@ hQ
 Cm
 MH
 Lv
-qX
+UJ
 MH
 Lv
 Cm
@@ -15339,7 +15358,7 @@ hQ
 Cm
 qX
 og
-qX
+UJ
 og
 Cm
 Cm
@@ -15491,8 +15510,8 @@ Cm
 Cm
 qX
 qX
-qX
-qX
+UJ
+UJ
 Cm
 qX
 qX
@@ -15644,7 +15663,7 @@ qX
 qX
 qX
 qX
-qX
+UJ
 EJ
 qX
 Yh
@@ -15796,7 +15815,7 @@ qX
 xl
 no
 zD
-qX
+UJ
 Cm
 St
 sb
@@ -15931,7 +15950,7 @@ ah
 ah
 ah
 ah
-ah
+Cx
 ah
 ah
 ao
@@ -15948,7 +15967,7 @@ qX
 rI
 YJ
 Jx
-qX
+UJ
 Cm
 Cm
 Cm
@@ -16100,7 +16119,7 @@ qX
 hC
 Ye
 kh
-qX
+UJ
 Cm
 qX
 qX
@@ -16404,7 +16423,7 @@ qX
 qX
 Vr
 uL
-qX
+UJ
 Cm
 St
 sb
@@ -17156,7 +17175,7 @@ bY
 bY
 bY
 ai
-at
+AY
 at
 at
 at
@@ -17460,7 +17479,7 @@ bY
 cc
 cc
 at
-at
+AY
 at
 at
 aE
@@ -17612,7 +17631,7 @@ cc
 cc
 ae
 at
-at
+AY
 at
 aE
 aa
@@ -17762,9 +17781,9 @@ Dh
 rr
 RI
 cz
-ae
-at
-at
+fG
+AY
+AY
 aE
 aa
 Zp
@@ -17914,7 +17933,7 @@ rr
 rr
 RI
 ae
-ae
+fG
 at
 aE
 aa
@@ -18066,7 +18085,7 @@ rr
 rr
 RI
 ae
-ae
+fG
 aE
 aa
 aa
@@ -18218,7 +18237,7 @@ ZH
 jM
 RI
 Mb
-ae
+fG
 aE
 aa
 aa
@@ -18370,7 +18389,7 @@ yG
 Yt
 wG
 ae
-ae
+fG
 aE
 aa
 aa
@@ -18522,7 +18541,7 @@ Ih
 PI
 RI
 Mb
-ae
+fG
 aE
 aa
 aa
@@ -18674,7 +18693,7 @@ rr
 rr
 RI
 ae
-ae
+fG
 aE
 aa
 aa
@@ -18826,7 +18845,7 @@ rr
 rr
 RI
 ae
-ae
+fG
 at
 aE
 aa
@@ -18978,8 +18997,8 @@ rr
 rr
 RI
 cF
-ae
-at
+fG
+AY
 at
 aE
 aa
@@ -19131,8 +19150,8 @@ rr
 cc
 cc
 ae
-at
-at
+AY
+AY
 at
 aE
 aa
@@ -19284,8 +19303,8 @@ cc
 cc
 cc
 at
-at
-at
+AY
+AY
 at
 aE
 aa
@@ -19437,8 +19456,8 @@ BY
 cc
 cc
 at
-at
-at
+AY
+AY
 at
 aE
 aa
@@ -19590,8 +19609,8 @@ BY
 cc
 cc
 at
-at
-at
+AY
+AY
 at
 aE
 aa
@@ -19743,7 +19762,7 @@ BY
 cc
 cc
 at
-at
+AY
 at
 LR
 aE
@@ -19895,11 +19914,11 @@ BY
 BY
 cc
 cc
-aZ
-aZ
-aZ
-aZ
-aZ
+fq
+fq
+fq
+fq
+fq
 fq
 fq
 fq
@@ -20190,13 +20209,13 @@ Sr
 sq
 Sr
 Sr
-BY
-BY
-BY
-BY
-BY
-BY
-BY
+Li
+Li
+Li
+Li
+Li
+Li
+Li
 BY
 cc
 cc
@@ -20342,13 +20361,13 @@ BY
 BY
 BY
 BY
+Li
 BY
 BY
+Li
 BY
 BY
-BY
-BY
-BY
+Li
 BY
 cc
 IZ
@@ -20489,18 +20508,18 @@ BY
 BY
 BY
 BY
-BY
-BY
-BY
+Li
+Li
+Li
 or
-BY
-BY
+Li
+Li
 fJ
 BY
+Li
 BY
 BY
-BY
-BY
+Li
 BY
 BY
 bY
@@ -20641,7 +20660,7 @@ BY
 BY
 UR
 BY
-BY
+Li
 Ev
 Ev
 Ev
@@ -20649,21 +20668,21 @@ Ev
 Ev
 Ev
 BY
-BY
+Li
 Nd
 CL
-BY
-BY
-BY
-bY
-bY
+Li
+Li
+Li
+bZ
+bZ
 bY
 bY
 at
 AY
 ki
 sG
-ft
+cn
 pp
 Co
 ej
@@ -20793,7 +20812,7 @@ oF
 qH
 KC
 vi
-BY
+Li
 lN
 iz
 Ez
@@ -20801,14 +20820,14 @@ zu
 Bu
 Ev
 BY
-BY
+Li
 Nd
 BY
 BY
 BY
 BY
 bY
-bY
+bZ
 bY
 bY
 at
@@ -20945,7 +20964,7 @@ rn
 iy
 ex
 EE
-BY
+Li
 QA
 xw
 MI
@@ -20953,7 +20972,7 @@ uN
 Ot
 Ev
 Sa
-BY
+Li
 Nd
 BY
 BY
@@ -21105,7 +21124,7 @@ XA
 AE
 Ev
 BY
-BY
+Li
 Nd
 BY
 BY
@@ -21257,7 +21276,7 @@ Nd
 Nd
 Nd
 BY
-BY
+Li
 Nd
 BY
 BY
@@ -21409,7 +21428,7 @@ BY
 BY
 BY
 BY
-BY
+Li
 Nd
 BY
 BY
@@ -21558,10 +21577,10 @@ aa
 aa
 Nd
 BY
-BY
-BY
-BY
-BY
+Li
+Li
+Li
+Li
 Nd
 BY
 BY
@@ -21710,7 +21729,7 @@ aa
 aa
 Nd
 BY
-BY
+Li
 bP
 bP
 bP
@@ -21862,7 +21881,7 @@ aa
 aa
 Nd
 BY
-BY
+Li
 bP
 Rb
 PD
@@ -22014,7 +22033,7 @@ aa
 aa
 Nd
 Sa
-BY
+Li
 bP
 Or
 FY
@@ -22032,7 +22051,7 @@ AY
 YG
 hA
 yL
-zp
+yL
 gC
 sR
 Gv
@@ -22166,7 +22185,7 @@ aa
 aa
 Nd
 BY
-BY
+Li
 bP
 cC
 cC
@@ -22184,7 +22203,7 @@ md
 YG
 nn
 yL
-yL
+zp
 pC
 ZU
 IT
@@ -22318,7 +22337,7 @@ aa
 aa
 Nd
 BY
-BY
+Li
 bP
 lx
 cC
@@ -22470,7 +22489,7 @@ Nd
 Nd
 Nd
 BY
-BY
+Li
 bP
 cC
 cC
@@ -22622,14 +22641,14 @@ BY
 BY
 BY
 BY
-BY
+Li
 bP
 sY
 Tp
 NE
 Tp
 bP
-cC
+ur
 cC
 cC
 cC
@@ -22768,20 +22787,20 @@ BY
 BY
 BY
 BY
-BY
-BY
-BY
-BY
-BY
-BY
-BY
+Li
+Li
+Li
+Li
+Li
+Li
+Li
 bP
 Rb
 PD
 Rb
 PD
 bP
-cC
+ur
 cC
 oo
 cC
