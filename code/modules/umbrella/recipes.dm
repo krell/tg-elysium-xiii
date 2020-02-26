@@ -31,6 +31,15 @@
 
 	return
 
+
+/datum/chemical_reaction/denaturation_progenitor
+	name = "Denaturation RNA Progenitor"
+	id = "denaturationrnaprogenitor"
+	results = list(/datum/reagent/denatured/rna/progenitor = 1)
+	required_reagents = list(/datum/reagent/dimethylsulfoxide = 3, /datum/reagent/progenitor = 1)
+	required_temp = 343
+
+
 /datum/chemical_reaction/hybridation_ebola_progenitor
 	name = "Hybridation Ebola-Progenitor"
 	id = "hybridationebolaprogenitor"
@@ -38,8 +47,3 @@
 	required_reagents = list(/datum/reagent/denatured/rna/progenitor = 1,/datum/reagent/denatured/rna/ebola = 1)
 	required_temp = 315
 	is_cold_recipe = TRUE
-
-
-
-
-

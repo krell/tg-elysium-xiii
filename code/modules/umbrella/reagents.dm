@@ -30,3 +30,14 @@
 /datum/reagent/tvirus/reaction_mob(mob/living/carbon/C, method=TOUCH, reac_volume)
 	if(method == INGEST || method == INJECT)
 		C.ForceContractDisease(new /datum/disease/tvirus(),FALSE,TRUE)
+
+
+/datum/reagent/progenitor
+	name = "Progenitor Virus"
+	description = "A virus living in the sun stairway."
+	color = "#AAAAAA77"
+	metabolization_rate = INFINITY
+
+/datum/reagent/progenitor/reaction_mob(mob/living/carbon/C, method=TOUCH, reac_volume)
+	if(method == INGEST || method == INJECT)
+		C.ForceContractDisease(new /datum/disease/progenitor(),FALSE,TRUE)

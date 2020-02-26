@@ -47,7 +47,7 @@
 			// zombies)
 			return
 
-		target.ForceContractDisease(new /datum/disease/tvirus(),FALSE,TRUE)
+		target.ContactContractDisease(new /datum/disease/tvirus(),FALSE,TRUE)
 		/*
 		var/obj/item/organ/zombie_infection/infection
 		infection = target.getorganslot(ORGAN_SLOT_ZOMBIE)
