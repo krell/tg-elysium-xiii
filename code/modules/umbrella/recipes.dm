@@ -14,15 +14,14 @@
 
 /datum/chemical_reaction/denaturation/on_reaction(datum/reagents/holder, created_volume)
 	var/datum/reagent/blood/B = locate(/datum/reagent/blood) in holder.reagent_list
-	message_admins("Denaturation en cours...")
 	if(B && B.data)
 		for(var/datum/disease/D in B.data["viruses"])
-			message_admins("[D.agent]")
-			if(D.agent == "ssRNA-RT")
+			/*if(D.agent == "ssRNA-RT")
 				var/datum/reagent/denatured/rna/progenitor/P = new /datum/reagent/denatured/rna/progenitor()
 				P.volume = created_volume
 				holder.reagent_list += P
-			else if(D.agent == "Ebolavirus")
+			else if(D.agent == "Ebolavirus")*/
+			if(D.agent == "Ebolavirus")
 				var/datum/reagent/denatured/rna/ebola/E = new /datum/reagent/denatured/rna/ebola()
 				E.volume = created_volume
 				holder.reagent_list += E

@@ -1,5 +1,5 @@
 GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
-		/mob/living,
+//		/mob/living,
 		/obj/structure/blob,
 		/obj/effect/rune,
 		/obj/structure/spider/spiderling,
@@ -177,7 +177,7 @@ GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		for(var/atom/movable/AM in shuttle_area)
 			if(iscameramob(AM))
 				continue
-			if(bounty_ship_item_and_contents(AM, dry_run = FALSE))
+			if(bounty_ship_item_and_contents(AM, dry_run = FALSE) || bounty_ship_umbrella_mob(AM, dry_run = FALSE))
 				matched_bounty = TRUE
 			if(!AM.anchored || istype(AM, /obj/mecha))
 				export_item_and_contents(AM, export_categories , dry_run = FALSE, external_report = ex)
