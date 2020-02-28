@@ -1148,14 +1148,11 @@
 	name = "Mining Maintenance";
 	req_access_txt = "48"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
 /obj/structure/cable,
-/turf/open/floor/plating,
+/turf/open/floor/plasteel,
 /area/maintenance/department/cargo)
 "gQ" = (
 /obj/structure/sign/logo/umbrella7,
@@ -2786,6 +2783,14 @@
 "ry" = (
 /obj/structure/table,
 /obj/machinery/cell_charger,
+/obj/item/stack/sheet/mineral/plasma{
+	pixel_x = -3;
+	pixel_y = 6
+	},
+/obj/item/stack/sheet/mineral/plasma{
+	pixel_x = 3;
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel,
 /area/engine/lobby)
 "rA" = (
@@ -4667,6 +4672,11 @@
 	},
 /obj/item/storage/box/rxglasses,
 /obj/item/reagent_containers/dropper,
+/obj/item/restraints/handcuffs/cable{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/restraints/handcuffs/cable,
 /turf/open/floor/plasteel/dark,
 /area/science/genetics)
 "FO" = (
@@ -6256,6 +6266,12 @@
 "Qh" = (
 /turf/open/floor/engine,
 /area/engine/engineering)
+"Qi" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/open/floor/plasteel/freezer,
+/area/crew_quarters/toilet/restrooms)
 "Ql" = (
 /obj/structure/cable,
 /turf/open/floor/plasteel/white,
@@ -6490,13 +6506,6 @@
 /obj/machinery/telecomms/bus/preset_four,
 /turf/open/floor/circuit/telecomms/mainframe,
 /area/tcommsat/server)
-"Sa" = (
-/obj/machinery/light{
-	dir = 1;
-	light_color = "#cee5d2"
-	},
-/turf/open/floor/plasteel,
-/area/quartermaster/storage)
 "Sb" = (
 /obj/machinery/atmospherics/pipe/simple/cyan/visible{
 	dir = 4
@@ -17188,9 +17197,9 @@ wB
 FP
 FP
 VM
-VM
-VM
-VM
+cV
+cV
+cY
 aC
 cY
 GQ
@@ -17199,7 +17208,7 @@ aA
 UF
 UF
 UF
-UF
+Qi
 Tt
 Tt
 GQ
@@ -17340,8 +17349,8 @@ it
 FP
 FP
 VM
-FP
-FP
+VM
+VM
 VM
 VM
 VM
@@ -17349,9 +17358,9 @@ VM
 VM
 VM
 GQ
-aA
-GQ
-vo
+UF
+UF
+UF
 UF
 UF
 GQ
@@ -17501,7 +17510,7 @@ EV
 FP
 FP
 GQ
-ks
+aA
 GQ
 vo
 UF
@@ -17652,10 +17661,10 @@ FP
 FP
 FP
 FP
-RI
-RI
-RI
-UF
+GQ
+ks
+GQ
+vo
 UF
 UF
 GQ
@@ -17804,15 +17813,15 @@ FP
 FP
 FP
 FP
-VM
-rr
-rr
 RI
 RI
 RI
 RI
-bY
-bY
+RI
+RI
+RI
+RI
+cc
 cc
 cc
 at
@@ -17959,12 +17968,12 @@ FP
 VM
 rr
 rr
+rr
+rr
+rr
+Dh
+rr
 RI
-RI
-RI
-RI
-RI
-cc
 cc
 ae
 at
@@ -18114,7 +18123,7 @@ rr
 rr
 rr
 rr
-Dh
+rr
 rr
 RI
 cz
@@ -19629,8 +19638,8 @@ FR
 Hc
 FR
 RI
-rr
-rr
+RI
+RI
 RI
 RI
 RI
@@ -19781,14 +19790,14 @@ PP
 rr
 rr
 RI
-RI
-RI
-RI
+BY
+aG
+BY
 BY
 BY
 Rl
 BY
-BY
+aG
 BY
 cc
 cc
@@ -19934,13 +19943,13 @@ rr
 RP
 RI
 BY
+aG
 BY
 BY
 BY
 BY
 BY
-BY
-BY
+aG
 BY
 BY
 cc
@@ -21441,7 +21450,7 @@ aa
 aa
 Nd
 Nd
-Nd
+BY
 BY
 BY
 BY
@@ -22365,7 +22374,7 @@ BY
 BY
 ys
 BY
-BY
+fJ
 BY
 Li
 BY
@@ -22517,8 +22526,8 @@ Nd
 Nd
 Nd
 Nd
-fJ
-Li
+Nd
+Nd
 Li
 BY
 Nd
@@ -22668,10 +22677,10 @@ aa
 aa
 aa
 aa
+aa
+aa
 Nd
-BY
 Li
-BY
 BY
 Nd
 rq
@@ -22820,10 +22829,10 @@ aa
 aa
 aa
 aa
+aa
+aa
 Nd
-BY
 Li
-BY
 BY
 Nd
 rq
@@ -22972,10 +22981,10 @@ aa
 aa
 aa
 aa
+aa
+aa
 Nd
-BY
 Li
-BY
 BY
 Nd
 rq
@@ -23124,10 +23133,10 @@ aa
 aa
 aa
 aa
+aa
+aa
 Nd
-BY
 Li
-BY
 BY
 Nd
 rq
@@ -23276,10 +23285,10 @@ aa
 aa
 aa
 aa
+aa
+aa
 Nd
-Sa
 Li
-BY
 BY
 Nd
 rq
@@ -23428,10 +23437,10 @@ aa
 aa
 aa
 aa
+aa
+aa
 Nd
-BY
 Li
-BY
 BY
 Nd
 rq
@@ -23580,10 +23589,10 @@ aa
 aa
 aa
 aa
+aa
+aa
 Nd
-BY
 Li
-BY
 BY
 Nd
 rq
@@ -23733,9 +23742,9 @@ Nd
 Nd
 Nd
 Nd
-BY
+Nd
+Nd
 Li
-BY
 BY
 Nd
 rq
@@ -23887,7 +23896,7 @@ Rl
 BY
 BY
 Li
-BY
+Li
 BY
 Nd
 rq

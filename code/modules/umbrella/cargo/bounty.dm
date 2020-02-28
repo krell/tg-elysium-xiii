@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 // Called lazily at startup to populate GLOB.bounties_list with random bounties.
 /proc/setup_bounties_umbrella()
 	//All the products to sell
-	var/list/umbrella_list_offer = list(/datum/bounty/mob/umbrella/zombie_monkey)
+	var/list/umbrella_list_offer = list(/datum/bounty/mob/umbrella/zombie_monkey,/datum/bounty/mob/umbrella/zombie)
 
 	for(var/umbrella_bounty in umbrella_list_offer)
 		try_add_umbrella_bounty(new umbrella_bounty)
@@ -20,14 +20,6 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 	return TRUE
 
 
-/datum/bounty/mob/umbrella/zombie_monkey
-	name = "Monkey Zombie"
-	description = "Provide subjects for spreading infection into a far away jungle."
-	reward = 500
-	required_count = 1
-	wanted_types = list(/mob/living/carbon/monkey)
-	species_required = /datum/species/zombie/umbrella/monkey
-
 
 // BOUNTY UMBRELLA
 // This code, ensure that zombie is sell and not crew
@@ -42,8 +34,34 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 
 /datum/bounty/mob/umbrella/New()
 	..()
-	wanted_types = typecacheof(wanted_types)
+	//wanted_types = typecacheof(wanted_types)
 	exclude_types = typecacheof(exclude_types)
+
+/datum/bounty/mob/umbrella/zombie_monkey
+	name = "Monkey Zombie"
+	description = "Provide subjects for spreading infection into a far away jungle."
+	reward = 500
+	required_count = 1
+	wanted_types = /mob/living/carbon/monkey
+	species_required = /datum/species/zombie/umbrella/monkey
+
+/datum/bounty/mob/umbrella/zombie_monkey/New()
+	required_count = rand(3,8)
+	reward = 500 * required_count
+
+
+
+/datum/bounty/mob/umbrella/zombie
+	name = "Zombie"
+	description = "Basic weapon to speads virus in cities.."
+	reward = 750
+	required_count = 1
+	wanted_types = /mob/living/carbon/human
+	species_required = /datum/species/zombie/umbrella/human
+
+/datum/bounty/mob/umbrella/zombie/New()
+	required_count = rand(3,5)
+	reward = 1000 * required_count
 
 /datum/bounty/mob/umbrella/completion_string()
 	return {"[shipped_count]/[required_count]"}
@@ -51,16 +69,22 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 /datum/bounty/mob/umbrella/can_claim()
 	return ..() && shipped_count >= required_count
 
+
+//MOB ELIGIBILITY
 /datum/bounty/mob/umbrella/applies_to(mob/living/carbon/C)
 	//is the mob own the dna and the species required ?
-	if(!include_subtypes && !(C.dna.species == species_required))
-		message_admins("L'article n'a pas ete vendu, son espece est [C.dna.species.name]")
+
+	if(!istype(C,/mob/living/carbon))
+		return FALSE
+
+	if(istype(C,wanted_types) && istype(C.dna.species,species_required))
+		return shipped_count < required_count
+	else
 		return FALSE
 
 	//if(include_subtypes && (!is_type_in_typecache(C, wanted_types) || is_type_in_typecache(C, exclude_types)))
 	//	return FALSE
 
-	return shipped_count < required_count
 
 /datum/bounty/mob/umbrella/claim()
 	if(can_claim())
@@ -74,6 +98,7 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 		return
 
 	shipped_count += 1
+	message_admins("Umbrella has sent [C.name] to CentCom")
 
 /datum/bounty/mob/umbrella/compatible_with(datum/other_bounty)
 	return type != other_bounty.type
@@ -93,7 +118,7 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 
 /proc/bounty_ship_umbrella_mob(atom/movable/AM, dry_run=FALSE)
 	if(!GLOB.bounties_umbrella_list.len)
-		setup_bounties()
+		setup_bounties_umbrella()
 
 	var/list/matched_one = FALSE
 	for(var/thing in reverseRange(AM.GetAllContents()))
