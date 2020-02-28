@@ -34,10 +34,9 @@
 	if(!proximity_flag)
 		return
 	else if(isliving(target))
-		if(ishuman(target))
-			try_to_zombie_infect_tvirus(target)
-		else
-			check_feast(target, user)
+		try_to_zombie_infect_tvirus(target)
+	else
+		check_feast(target, user)
 
 /proc/try_to_zombie_infect_tvirus(mob/living/carbon/target)
 	//Si la cible est un humain ou un singe
@@ -48,7 +47,7 @@
 			// zombies)
 			return
 
-		target.ForceContractDisease(new /datum/disease/tvirus(),FALSE,TRUE)
+		target.ContactContractDisease(new /datum/disease/tvirus(),FALSE,TRUE)
 		/*
 		var/obj/item/organ/zombie_infection/infection
 		infection = target.getorganslot(ORGAN_SLOT_ZOMBIE)

@@ -9,13 +9,13 @@
 	severity = DISEASE_SEVERITY_BIOHAZARD
 	spread_text = "Blood"
 	spread_flags = DISEASE_SPREAD_BLOOD
-	disease_flags = CAN_CARRY | CAN_RESIST
+	disease_flags = CAN_CARRY
 	visibility_flags = HIDDEN_SCANNER
 	var/living_transformation_time = 30
 	var/started = FALSE
 	var/timer_id
 	var/revive_time_min = 3000
-	var/revive_time_max = 7000
+	var/revive_time_max = 5000
 
 /datum/disease/tvirus/proc/zombify()
 

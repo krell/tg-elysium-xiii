@@ -2,7 +2,7 @@
 // Virology Medical Smartfridge Umbrella Corporation
 // ----------------------------
 /obj/machinery/smartfridge/chemistry/virology/umbrella
-	name = "smart virus storage"
+	name = "smart virus storage umbrella inc."
 	desc = "A refrigerated storage unit for volatile sample storage."
 
 /obj/machinery/smartfridge/chemistry/virology/umbrella/preloaded

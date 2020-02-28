@@ -6,7 +6,7 @@
 	name = "Ebola"
 	desc = "The Ebola Virus kills much people through the galaxy."
 	form = "Zaire" // Will let med-scanners know that this disease was engineered
-	agent = "Filovirus"
+	agent = "Ebolavirus"
 	symptoms = list(new/datum/symptom/cough,new/datum/symptom/fever,new/datum/symptom/headache,new/datum/symptom/vomit_ebola,new/datum/symptom/viraladaptation)
 	SetSeverity(DISEASE_SEVERITY_BIOHAZARD)
 	..()
