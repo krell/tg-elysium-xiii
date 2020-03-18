@@ -145,6 +145,12 @@
 	///What kind of footstep this mob should have. Null if it shouldn't have any.
 	var/footstep_type
 
+	//for simple_animal umbrella zombification
+	var/zombified = FALSE
+	var/umbrella_regen_cooldown = 0
+	var/umbrella_heal_rate = 1
+	var/list/spooks
+
 /mob/living/simple_animal/Initialize()
 	. = ..()
 	GLOB.simple_animals[AIStatus] += src

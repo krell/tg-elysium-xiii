@@ -55,9 +55,16 @@
 
 /proc/iszombiev2(M)
 	. = FALSE
-	var/mob/living/carbon/C = M
-	if(C.dna && istype(C.dna.species, /datum/species/zombie))
-		. = TRUE
+
+	if(istype(M,/mob/living/carbon))
+
+		var/mob/living/carbon/C = M
+		if(C.dna && istype(C.dna.species, /datum/species/zombie))
+			. = TRUE
+	else if(istype(M,/mob/living/simple_animal/pet/dog/doberman))
+		var/mob/living/simple_animal/pet/dog/doberman/D = M
+		if(D.zombified)
+			. = TRUE
 
 
 #undef REGENERATION_DELAY

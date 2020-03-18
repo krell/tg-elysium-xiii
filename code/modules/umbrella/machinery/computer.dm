@@ -45,7 +45,7 @@
 	setup_bounties_umbrella()
 
 	var/datum/bank_account/D = SSeconomy.get_dep_account(ACCOUNT_CAR)
-	var/list/dat = list({"<a href='?src=[REF(src)];refresh=1'>Refresh</a>
+	var/list/dat = list({"<a href='?src=[REF(src)];refresh=1;choice=Renew'>Renew bounties</a><a href='?src=[REF(src)];refresh=1'>Refresh</a>
 	<a href='?src=[REF(src)];refresh=1;choice=Print'>Print Paper</a>
 	<p>Credits: <b>[D.account_balance]</b></p>
 	<table style="text-align:center;" border="1" cellspacing="0" width="100%">
@@ -96,8 +96,18 @@
 			if(B)
 				B.claim()
 
+		if("Renew")
+			var/i = 0
+			for(var/datum/bounty/B in GLOB.bounties_umbrella_list)
+				if(B.claimed)
+					GLOB.bounties_umbrella_list.Remove(B)
+					i = 1
+			if(i == 1)
+				setup_bounties_umbrella()
+
 	if(href_list["refresh"])
 		playsound(src, "terminal_type", 25, FALSE)
+
 
 	updateUsrDialog()
 
