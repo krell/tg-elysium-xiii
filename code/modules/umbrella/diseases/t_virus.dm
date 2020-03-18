@@ -1,11 +1,11 @@
 /datum/disease/tvirus
-	name = "Tyran Virus"
+	name = "Tyrant Virus"
 	max_stages = 4
 	cure_text = "Unknown treatment"
 	agent = "T-Virus"
-	viable_mobtypes = list(/mob/living/carbon/human, /mob/living/carbon/monkey)
+	viable_mobtypes = list(/mob/living/carbon/human, /mob/living/carbon/monkey,/mob/living/simple_animal/pet/dog/doberman)
 	permeability_mod = 0.5
-	desc = "Tyran Virus, inherited from Progenitor Virus, can causes violent mutation."
+	desc = "Tyrant Virus, inherited from Progenitor Virus, can causes violent mutation."
 	severity = DISEASE_SEVERITY_BIOHAZARD
 	spread_text = "Blood"
 	spread_flags = DISEASE_SPREAD_BLOOD
@@ -14,12 +14,13 @@
 	var/living_transformation_time = 30
 	var/started = FALSE
 	var/timer_id
-	var/revive_time_min = 3000
-	var/revive_time_max = 5000
+	var/revive_time_min = 100//3000
+	var/revive_time_max = 100//5000
 
 /datum/disease/tvirus/proc/zombify()
 
-	if(!affected_mob.getorgan(/obj/item/organ/brain))
+	if(!affected_mob.getorgan(/obj/item/organ/brain) && !istype(affected_mob,/mob/living/simple_animal))
+		message_admins("The affected mob has not brain and is not an simple animal")
 		return
 
 	to_chat(affected_mob, "<span class='cultlarge'>You can feel your heart stopping, but something isn't right... \
@@ -31,7 +32,11 @@
 	else if (affected_mob.type == /mob/living/carbon/monkey)
 		affected_specie = /datum/species/zombie/umbrella/monkey
 
-	affected_mob.set_species(affected_specie)
+	if(!istype(affected_mob,/mob/living/simple_animal))
+		affected_mob.set_species(affected_specie)
+	else
+		var/mob/living/simple_animal/SA = affected_mob
+		SA.zombify()
 
 	var/stand_up = (affected_mob.stat == DEAD) || (affected_mob.stat == UNCONSCIOUS)
 
@@ -50,12 +55,15 @@
 	affected_mob.Stun(living_transformation_time)
 	to_chat(affected_mob, "<span class='alertalien'>You are now a zombie! Do not seek to be cured, do not help any non-zombies in any way, do not harm your zombie brethren and spread the disease by killing others. You are a creature of hunger and violence.</span>")
 	//The first call of function for setting species if the mob is dead doesn't equip the hand of zombie, the second call does it.
-	affected_mob.set_species(affected_specie)
+	if(!istype(affected_mob,/mob/living/simple_animal))
+		affected_mob.set_species(affected_specie)
+	else
+		var/mob/living/simple_animal/SA = affected_mob
+		SA.zombify()
 
 /datum/disease/tvirus/stage_act()
 	..()
 	if(!iszombiev2(affected_mob))
-
 		if(!started)
 			started = TRUE
 			var/revive_time = rand(revive_time_min, revive_time_max)

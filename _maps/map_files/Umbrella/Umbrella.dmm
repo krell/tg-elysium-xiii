@@ -721,6 +721,10 @@
 /obj/structure/sign/logo/umbrella,
 /turf/open/floor/plasteel/white,
 /area/hallway/primary/central)
+"dO" = (
+/mob/living/simple_animal/pet/dog/doberman,
+/turf/open/floor/plasteel/freezer,
+/area/medical/virology)
 "dR" = (
 /obj/machinery/vending/security,
 /obj/effect/turf_decal/bot,
@@ -1119,7 +1123,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/mob/living/carbon/monkey,
+/mob/living/simple_animal/pet/dog/doberman,
 /turf/open/floor/plasteel/freezer,
 /area/medical/virology)
 "gA" = (
@@ -1134,6 +1138,23 @@
 	},
 /turf/open/floor/grass,
 /area/science/genetics)
+"gD" = (
+/obj/structure/table/glass,
+/obj/item/paper_bin{
+	layer = 2.9
+	},
+/obj/item/pen/red,
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/item/storage/box/zipties{
+	pixel_x = 5;
+	pixel_y = 7;
+	pixel_z = 0
+	},
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
 "gI" = (
 /obj/structure/lattice/catwalk,
 /obj/machinery/atmospherics/pipe/heat_exchanging/simple,
@@ -1306,7 +1327,7 @@
 /obj/item/paper_bin/carbon{
 	layer = 2.9
 	},
-/obj/item/book/manual/umbrella,
+/obj/machinery/computer/bounty/umbrella,
 /turf/open/floor/carpet,
 /area/crew_quarters/heads/hop)
 "hQ" = (
@@ -2621,9 +2642,6 @@
 /obj/item/stack/sheet/mineral/plasma{
 	amount = 2
 	},
-/obj/item/storage/box/monkeycubes{
-	layer = 3.1
-	},
 /obj/item/clothing/gloves/color/latex,
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
@@ -3609,6 +3627,10 @@
 /obj/effect/turf_decal/tile/green{
 	dir = 4
 	},
+/obj/item/storage/box/zipties{
+	pixel_x = 5;
+	pixel_y = 7
+	},
 /turf/open/floor/plasteel/white,
 /area/medical/virology)
 "xw" = (
@@ -4324,7 +4346,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
-/obj/item/book/manual/umbrella,
+/obj/machinery/computer/bounty/umbrella,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hor)
 "CM" = (
@@ -5637,6 +5659,7 @@
 	dir = 1;
 	light_color = "#706891"
 	},
+/obj/item/book/manual/wiki/umbrella,
 /turf/open/floor/plasteel/white,
 /area/medical/chemistry)
 "LB" = (
@@ -6240,6 +6263,22 @@
 	},
 /turf/open/floor/plasteel,
 /area/security/brig)
+"PQ" = (
+/obj/structure/table/glass,
+/obj/item/clothing/gloves/color/latex,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/reagent_containers/dropper,
+/obj/effect/turf_decal/tile/green,
+/obj/effect/turf_decal/tile/green{
+	dir = 4
+	},
+/obj/effect/turf_decal/tile/green{
+	dir = 8
+	},
+/obj/item/clothing/glasses/science,
+/obj/item/book/manual/wiki/umbrella,
+/turf/open/floor/plasteel/white,
+/area/medical/virology)
 "PV" = (
 /obj/machinery/computer/security,
 /turf/open/floor/plasteel,
@@ -6458,7 +6497,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 8
 	},
-/obj/item/book/manual/umbrella,
+/obj/machinery/computer/bounty/umbrella,
 /turf/open/floor/plasteel/white,
 /area/crew_quarters/heads/cmo)
 "RA" = (
@@ -7298,6 +7337,7 @@
 /obj/effect/turf_decal/tile/purple{
 	dir = 8
 	},
+/obj/item/book/manual/wiki/umbrella,
 /turf/open/floor/plasteel/dark,
 /area/crew_quarters/heads/hor)
 "XA" = (
@@ -21474,7 +21514,7 @@ QP
 PD
 pr
 fe
-Rb
+dO
 bP
 cC
 zm
@@ -21778,7 +21818,7 @@ QP
 PD
 PD
 mm
-Rb
+dO
 bP
 cC
 cC
@@ -22086,7 +22126,7 @@ bP
 bP
 cC
 cC
-xs
+gD
 bP
 at
 AY
@@ -22846,7 +22886,7 @@ bt
 rp
 cC
 uY
-ms
+PQ
 bR
 at
 AY

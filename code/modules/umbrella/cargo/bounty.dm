@@ -3,7 +3,7 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 // Called lazily at startup to populate GLOB.bounties_list with random bounties.
 /proc/setup_bounties_umbrella()
 	//All the products to sell
-	var/list/umbrella_list_offer = list(/datum/bounty/mob/umbrella/zombie_monkey,/datum/bounty/mob/umbrella/zombie)
+	var/list/umbrella_list_offer = list(/datum/bounty/mob/umbrella/zombie_monkey,/datum/bounty/mob/umbrella/zombie,/datum/bounty/mob/umbrella/zombie_doberman)
 
 	for(var/umbrella_bounty in umbrella_list_offer)
 		try_add_umbrella_bounty(new umbrella_bounty)
@@ -40,28 +40,40 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 /datum/bounty/mob/umbrella/zombie_monkey
 	name = "Monkey Zombie"
 	description = "Provide subjects for spreading infection into a far away jungle."
-	reward = 500
+	reward = 600
 	required_count = 1
 	wanted_types = /mob/living/carbon/monkey
 	species_required = /datum/species/zombie/umbrella/monkey
 
 /datum/bounty/mob/umbrella/zombie_monkey/New()
 	required_count = rand(3,8)
-	reward = 500 * required_count
+	reward = reward * required_count
+
+
+/datum/bounty/mob/umbrella/zombie_doberman
+	name = "Doberman Zombie"
+	description = "Provide a fast weapon with fangs to pierce the armors and spreads virus in cities and countryside."
+	reward = 1500
+	required_count = 1
+	wanted_types = /mob/living/simple_animal/pet/dog/doberman
+
+/datum/bounty/mob/umbrella/zombie_doberman/New()
+	required_count = rand(1,3)
+	reward = reward * required_count
 
 
 
 /datum/bounty/mob/umbrella/zombie
 	name = "Zombie"
-	description = "Basic weapon to speads virus in cities.."
-	reward = 750
+	description = "Basic weapon to spreads virus in cities."
+	reward = 800
 	required_count = 1
 	wanted_types = /mob/living/carbon/human
 	species_required = /datum/species/zombie/umbrella/human
 
 /datum/bounty/mob/umbrella/zombie/New()
 	required_count = rand(3,5)
-	reward = 1000 * required_count
+	reward = reward * required_count
 
 /datum/bounty/mob/umbrella/completion_string()
 	return {"[shipped_count]/[required_count]"}
@@ -71,19 +83,23 @@ GLOBAL_LIST_EMPTY(bounties_umbrella_list)
 
 
 //MOB ELIGIBILITY
-/datum/bounty/mob/umbrella/applies_to(mob/living/carbon/C)
+/datum/bounty/mob/umbrella/applies_to(mob/living/L)
 	//is the mob own the dna and the species required ?
+	. = FALSE
+	if(istype(L,/mob/living/simple_animal))
+		var/mob/living/simple_animal/SA = L
+		if(istype(SA,wanted_types) && SA.zombified)
+			return shipped_count < required_count
 
-	if(!istype(C,/mob/living/carbon))
-		return FALSE
+	var/mob/living/carbon/C
+	if(istype(L,/mob/living/carbon))
+		C = L
+
 
 	if(istype(C,wanted_types) && istype(C.dna.species,species_required))
 		return shipped_count < required_count
-	else
-		return FALSE
 
-	//if(include_subtypes && (!is_type_in_typecache(C, wanted_types) || is_type_in_typecache(C, exclude_types)))
-	//	return FALSE
+
 
 
 /datum/bounty/mob/umbrella/claim()
