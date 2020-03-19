@@ -9,21 +9,27 @@
 /datum/chemical_reaction/denaturation
 	name = "Denaturation RNA"
 	id = "denaturationrna"
-	required_reagents = list(/datum/reagent/dimethylsulfoxide = 3, /datum/reagent/blood = 1)
+	required_reagents = list(/datum/reagent/dimethylsulfoxide = 3 )
+	required_catalysts = list(/datum/reagent/blood = 1)
 	required_temp = 343
 
 /datum/chemical_reaction/denaturation/on_reaction(datum/reagents/holder, created_volume)
 	var/datum/reagent/blood/B = locate(/datum/reagent/blood) in holder.reagent_list
+	message_admins(name)
+
 	if(B && B.data)
 		for(var/datum/disease/D in B.data["viruses"])
-			/*if(D.agent == "ssRNA-RT")
-				var/datum/reagent/denatured/rna/progenitor/P = new /datum/reagent/denatured/rna/progenitor()
-				P.volume = created_volume
-				holder.reagent_list += P
-			else if(D.agent == "Ebolavirus")*/
 			if(D.agent == "Ebolavirus")
 				var/datum/reagent/denatured/rna/ebola/E = new /datum/reagent/denatured/rna/ebola()
+
+				var/datum/reagent/denatured/rna/ebola/existing = locate(/datum/reagent/denatured/rna/ebola) in holder.reagent_list
+				if(existing)
+					existing.volume += created_volume
+					B.volume -= created_volume
+					return
+
 				E.volume = created_volume
+				B.volume -= created_volume
 				holder.reagent_list += E
 			else
 				return
