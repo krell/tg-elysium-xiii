@@ -14,8 +14,8 @@
 	var/living_transformation_time = 30
 	var/started = FALSE
 	var/timer_id
-	var/revive_time_min = 100//3000
-	var/revive_time_max = 100//5000
+	var/revive_time_min = 3000
+	var/revive_time_max = 5000
 
 /datum/disease/tvirus/proc/zombify()
 
